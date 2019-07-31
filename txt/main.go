@@ -17,6 +17,7 @@ var password = "jumiadmin"
 var database = "SJJUMI"
 
 func main() {
+	//prueba
 	// Build connection string
 	connString := fmt.Sprintf("server=%s;user id=%s;password=%s;port=%d;database=%s;encrypt=disable",
 		server, user, password, port, database)
@@ -65,9 +66,7 @@ func GenerarTxt() (int, error) {
 	fmt.Print("Ingrese importe a detraer:")
 	fmt.Scan(&detraer)
 
-
 	//fmt.Println(nombre)
-
 
 	tsql := fmt.Sprintf("exec txtAfip_v2 '%[1]s' ,%[2]d ,%[3]g\n", periodo, liquidacion, detraer)
 	//exec txtAfip_v2 @Periodo = '30/06/2019', @NumeroLiq = 1462, @ImporteDetraer = 4000.32
